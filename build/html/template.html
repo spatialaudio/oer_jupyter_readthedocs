@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Template for cookiecutter &mdash; jupyter_oer_blueprint 2024 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=6fefd858"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="How to choose a license" href="license.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            jupyter_oer_blueprint
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="oer.html">What are Open Educational Ressources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how_to.html">Step by Step - Creating OER with Jupyter, Git …</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">How to choose a license</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Template for cookiecutter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-cookiecutter">What is cookiecutter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-does-this-template-do">What does this template do?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-use-the-template">How to use the template</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">jupyter_oer_blueprint</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Template for cookiecutter</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/template.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="template-for-cookiecutter">
+<h1>Template for cookiecutter<a class="headerlink" href="#template-for-cookiecutter" title="Link to this heading"></a></h1>
+<p>This sections discusses the <a class="reference external" href="https://www.cookiecutter.io">cookiecutter</a> template, that can be found <a class="reference external" href="https://github.com/spatialaudio/cookiecutter_oer_jupyter">here</a>.</p>
+<section id="what-is-cookiecutter">
+<h2>What is cookiecutter<a class="headerlink" href="#what-is-cookiecutter" title="Link to this heading"></a></h2>
+<p>Cookiecutter is a tool to create project-templates. With these templates (or cookiecutters) you can quickly create a barebones structure for your project,
+including a general folder structure and initial files that can be automatically costumised to fit the project.
+It also allows hooks to be executed at several points during the creation. Hooks can be python or shell scripts.</p>
+</section>
+<section id="what-does-this-template-do">
+<h2>What does this template do?<a class="headerlink" href="#what-does-this-template-do" title="Link to this heading"></a></h2>
+<p>The template provided here is suposed to give you a head start while creating your OER either from scratch, or from a previously created collection of jupyter notebooks.
+It will create a basic folder structure to organize the materials <strong>!TODO: shown in figre…!</strong>. It also adds files providing functionality according to your choice.
+Those may include:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>A <code class="code docutils literal notranslate"><span class="pre">LICENSE</span></code> file with your prefered license text.</p></li>
+<li><p>files providing CI functionality through GitHub Actions. These will be stored in <code class="code docutils literal notranslate"><span class="pre">.github/workflows</span></code>.</p></li>
+<li><p>A <code class="code docutils literal notranslate"><span class="pre">README.md</span></code> file that already has some info about the project in it. It will be displayed by GitHub on the repositories landing page.</p></li>
+<li><p>A <code class="code docutils literal notranslate"><span class="pre">conf.py</span></code> used in building a static representation of the collection as html or pdf through sphinx with the nbsphinx extension.</p></li>
+<li><p>A <code class="code docutils literal notranslate"><span class="pre">.gitignore</span></code></p></li>
+<li><p>A <code class="code docutils literal notranslate"><span class="pre">requirements.txt</span></code> file. This file is generated as a placeholder. You have to fill</p></li>
+<li><p><strong>!TODO: check for completeness!</strong></p></li>
+</ul>
+</div></blockquote>
+<p>The template can also set up and initialize a local git repository, as well as a remote GitHub repository, through post gen hooks. You need to have git and GitHub CLI installed for this to work.</p>
+</section>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h2>
+<p>Apart from a <a class="reference external" href="https://www.python.org/downloads/">python 3 installation</a> you also need to install cookiecutter.
+You can use pip:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="n">cookiecutter</span>
+</pre></div>
+</div>
+<p>Or conda:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">cookiecutter</span>
+</pre></div>
+</div>
+<p>For further installation advice please refer to the <a class="reference external" href="https://cookiecutter.readthedocs.io/en/2.0.2/installation.html">official documentation</a>.</p>
+</section>
+<section id="how-to-use-the-template">
+<h2>How to use the template<a class="headerlink" href="#how-to-use-the-template" title="Link to this heading"></a></h2>
+<p>To use the template to create your new project you have to open a terminal and navigate to the folder you want to create the project folder in.
+Now you can either download the template from GitHub and use it from the directory you saved it in:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cookiecutter</span> <span class="o">&lt;</span><span class="n">your_template_folder</span><span class="o">&gt;/</span><span class="n">cookiecutter_oer_jupyter</span>
+</pre></div>
+</div>
+<p>Or you can tell cookiecutter to find the template on github:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cookiecutter</span> <span class="n">gh</span><span class="p">:</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">spatialaudio</span><span class="o">/</span><span class="n">cookiecutter_oer_jupyter</span>
+</pre></div>
+</div>
+<p>Now you will be prompted to input some values to configure your project. The prompts and what they do is listed below.</p>
+<dl class="simple">
+<dt>directory_name</dt><dd><p>The name of the directory that will be created.</p>
+</dd>
+<dt>project_name</dt><dd><p>The name of the project. This will default to the directory name given above.</p>
+</dd>
+<dt>contact_name</dt><dd><p>Your Name</p>
+</dd>
+<dt>contact_mail</dt><dd><p>Your e-mail adresse</p>
+</dd>
+<dt>year</dt><dd><p>The year of release</p>
+</dd>
+<dt>create_git</dt><dd><p>Choose if a local git repository should be initialised. Requires git installation.</p>
+</dd>
+<dt>create_remote_and_push</dt><dd><p>Choose if a remote repository should be created on GitHub. The local initial commit will be pushed.
+Only works if create_git is answered with Yes. Requires GitHub CLI installation and authentification by running <code class="code docutils literal notranslate"><span class="pre">gh</span> <span class="pre">auth</span> <span class="pre">login</span></code>.
+The <code class="code docutils literal notranslate"><span class="pre">directory_name</span></code> is used as the name of the repository.</p>
+</dd>
+<dt>github_organization</dt><dd><p>The name of your GitHub organization. If you dont want to create a repository within an organization, leave it as <code class="code docutils literal notranslate"><span class="pre">None</span></code>.</p>
+</dd>
+<dt>git_visibility</dt><dd><p>Choose between public, private and internal for your GitHub repositorys visibility. As our aim is to create OER this should always be public.</p>
+</dd>
+<dt>push_existing_remote</dt><dd><p>If you have already created a GitHub repository beforehand you can choose to push to that instead.</p>
+</dd>
+<dt>git_remote</dt><dd><p>The link to your pre-existing repository. To avoid conflicts the repository should be empty.</p>
+</dd>
+<dt>license</dt><dd><p>Choose an open license. More on that in the How to choose a license section. A <code class="code docutils literal notranslate"><span class="pre">LICENSE</span></code> file will be automatically created inlcuding the choosen licenses text.</p>
+</dd>
+<dt>include_ci</dt><dd><p>Choose to create files for Continiuos Intigriation through GitHub actions.</p>
+</dd>
+</dl>
+<p><strong>!TODO: Options for importing existing notebooks?!</strong></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="license.html" class="btn btn-neutral float-left" title="How to choose a license" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Johannes Otto.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

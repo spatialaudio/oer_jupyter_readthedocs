@@ -5,7 +5,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Step by Step - Creating OER with Jupyter, Git … &mdash; jupyter_oer_blueprint 2024 documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
 
   
@@ -49,7 +49,12 @@
 <li class="toctree-l1"><a class="reference internal" href="oer.html">What are Open Educational Ressources</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Step by Step - Creating OER with Jupyter, Git …</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#jupyter-notebooks">Jupyter Notebooks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#github-continuous-integration">Github - Continuous Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#github-continuous-integration">Github - Continuous Integration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#collaboration-and-authorship-tracking">Collaboration and Authorship tracking</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#continuous-integration">Continuous Integration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#referencing">Referencing</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#interacting-with-notebooks">Interacting with Notebooks</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#local">Local</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#my-binder">(my)Binder</a></li>
@@ -99,8 +104,61 @@ For an introduction to jupyter notebook please refer to other sites or the <a cl
 <section id="github-continuous-integration">
 <h2>Github - Continuous Integration<a class="headerlink" href="#github-continuous-integration" title="Link to this heading"></a></h2>
 <p>We will use GitHub to make our notebooks accessible and findable. GitHub also allowes for convinient revision and authorship tracking and provides tools for collaboration.
-Users can help revise and refine the materials through GitHubs issue and pull-request mechanisms. You can read more on the basics of GitHub and git <a class="reference external" href="https://docs.github.com/en/get-started">here</a>.</p>
-<p><strong>TBD…</strong></p>
+Users can help revise and refine the materials through GitHub’s issue and pull-request mechanisms. You can read more on the basics of GitHub and git <a class="reference external" href="https://docs.github.com/en/get-started">here</a>.</p>
+<section id="collaboration-and-authorship-tracking">
+<h3>Collaboration and Authorship tracking<a class="headerlink" href="#collaboration-and-authorship-tracking" title="Link to this heading"></a></h3>
+<p>GitHub’s Issues functionality can be used to track issues, answer questions people might have and receive enhancement proposals or feature requests.
+Through the Pull request mechanism other people can contribute their own changes to the code. All changes and who contributed them will be tracked.</p>
+</section>
+<section id="continuous-integration">
+<h3>Continuous Integration<a class="headerlink" href="#continuous-integration" title="Link to this heading"></a></h3>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Continuous_integration">Continuous Integration (CI)</a>  describes the process of integrating source code and automatically building and testing the software throughout development. This can help ensuring the quality and functionaltity of your OER materials.
+GitHub provides this functionality through its <a class="reference external" href="https://docs.github.com/en/actions">Actions</a> feature.</p>
+<p>GitHub Actions uses workflows configured in <a class="reference external" href="https://yaml.org">YAML</a> files ending on <code class="code docutils literal notranslate"><span class="pre">.yml</span></code> or <code class="code docutils literal notranslate"><span class="pre">.yaml</span></code>. These files have to be placed in your repository at <code class="code docutils literal notranslate"><span class="pre">.github/workflows/</span></code>. They contain information on when to be run, what to run and with what packages and versions.
+They can be executed be <a class="reference external" href="https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners/about-github-hosted-runners">GitHub hosted runners</a> or self hosted runners.</p>
+<p>You can use this to automatically check your project for programming errors whenever you change something. It can also <a class="reference external" href="https://en.wikipedia.org/wiki/Lint_(software)">lint</a> your notebooks at the same time.</p>
+<p>A <code class="code docutils literal notranslate"><span class="pre">notebook_ci.yml</span></code> workflow file, that runs a <a class="reference external" href="https://www.sphinx-doc.org/en/master/">sphinx</a>  build with <a class="reference external" href="https://nbsphinx.readthedocs.io/">nbsphinx</a> extension on certain conditions to execute all code in the notebooks could look like this:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Sphinx build</span>
+
+<span class="nt">on</span><span class="p">:</span>
+<span class="nt">push</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">branches</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span><span class="w">  </span><span class="c1"># Change this to the repository&#39;s main branch</span>
+<span class="nt">pull_request</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">branches</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+
+<span class="nt">schedule</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">cron</span><span class="p">:</span><span class="w">  </span><span class="s">&#39;30</span><span class="nv"> </span><span class="s">1</span><span class="nv"> </span><span class="s">1,15</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&#39;</span><span class="w"> </span><span class="c1"># POSIX cron syntax</span>
+</pre></div>
+</div>
+<p>This first part specifies the name of the workflow and on which events it should be executed. In this case it will be run whenever a push or pull-request is done to the maain branch of the repository.
+It is also run by a schedule on every 1. and 15. day of the month at 1:30 o clock.</p>
+<p>The next part defines what is done and what the runner needs to run it (e.g. a specific operating system or python version).</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">jobs</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">linux_py3_12</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+
+<span class="w">        </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v3</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v3</span>
+<span class="w">            </span><span class="l l-Scalar l-Scalar-Plain">with</span><span class="p p-Indicator">:</span>
+<span class="w">            </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.12</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sudo apt-get install libsndfile1 pandoc</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip install -r requirements.txt</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip install -r ci/requirements.txt</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python -m sphinx . _build/ -b html</span>
+</pre></div>
+</div>
+<p>As you can see the this workflow will also automatically install all requirements from a <code class="code docutils literal notranslate"><span class="pre">requirements.txt</span></code>.
+The <code class="code docutils literal notranslate"><span class="pre">notebook_ci.yml</span></code>, <code class="code docutils literal notranslate"><span class="pre">requirements.txt</span></code>, as well as a <code class="code docutils literal notranslate"><span class="pre">lint_nb.yml</span></code> file, that can be used for automatic linting, are included in the provided <a class="reference external" href="https://github.com/spatialaudio/cookiecutter_oer_jupyter">cookiecutter template</a>.
+You have a choice to include them on project creation. More on that in the cookiecutter template section.
+<strong>TBD…</strong></p>
+</section>
+<section id="referencing">
+<h3>Referencing<a class="headerlink" href="#referencing" title="Link to this heading"></a></h3>
+<p>For others to be able to properly reference your OER you should mark a well maintained state of your repository as a release. Additionally you can attach a <a class="reference external" href="https://www.doi.org/the-identifier/what-is-a-doi/">digital object identifier (DOI)</a> through services like <a class="reference external" href="https://zenodo.org">zenodo</a>.</p>
+</section>
 </section>
 <section id="interacting-with-notebooks">
 <h2>Interacting with Notebooks<a class="headerlink" href="#interacting-with-notebooks" title="Link to this heading"></a></h2>
@@ -114,14 +172,14 @@ But this also has the highest barrier to entry because of the need of local inst
 <section id="my-binder">
 <h3>(my)Binder<a class="headerlink" href="#my-binder" title="Link to this heading"></a></h3>
 <p>With binder you can make your notebooks avaible to be interacted within an online environment. You can use <a class="reference external" href="https://mybinder.org">mybinder.org</a> to host the notebooks for you with no futher requirements than your already available puplic repository.
-Binder allows for the notebooks used and executed like you would with a local installation. The only downside is, that you are unable to save your changes.</p>
+Binder allows for the notebooks used and executed like you would                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               with a local installation. The only downside is, that you are unable to save your changes.</p>
 <p>You can also set up your own binder server, if the ressources provided by <a class="reference external" href="https://mybinder.org">mybinder.org</a> are not sufficient. Read more on that in the <a class="reference external" href="https://mybinder.readthedocs.io/en/latest/">binder documentation</a>.</p>
 </section>
 <section id="nbviewer">
 <h3>nbviewer<a class="headerlink" href="#nbviewer" title="Link to this heading"></a></h3>
 <p>The nbviewer service provides static versions of your notebook collection.
 All you have to do is enter your repository on <a class="reference external" href="https://nbviewer.org">nbviewer.org</a> and you will get a link to static renderings of your notebooks.
-This convinient for having a first look at the materials without any prior knowlege of jupyter but it doesn’t allow for any interactivity.</p>
+This is convinient for having a first look at the materials without any prior knowlege of jupyter but it doesn’t allow for any interactivity.</p>
 </section>
 <section id="export-with-nbsphinx">
 <h3>Export with nbsphinx<a class="headerlink" href="#export-with-nbsphinx" title="Link to this heading"></a></h3>

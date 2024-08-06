@@ -20,7 +20,7 @@ It will create a basic folder structure to organize the materials **!TODO: shown
 Those may include:
 
     * A :code:`LICENSE` file with your prefered license text.
-    * files providing CI functionality through GitHub Actions. These will be stored in :code:`.github/workflows`.
+    * files providing CI functionality through GitHub Actions. These will be stored in :code:`.github/workflows` and :code:`.ci/`.
     * A :code:`README.md` file that already has some info about the project in it. It will be displayed by GitHub on the repositories landing page.
     * A :code:`conf.py` used in building a static representation of the collection as html or pdf through sphinx with the nbsphinx extension.        
     * A :code:`.gitignore` 
@@ -78,24 +78,35 @@ project_name
     The name of the project. This will default to the directory name given above.
 
 contact_name
-    Your Name
+    The persons name who is the main contact for the project.
 
 contact_mail
-    Your e-mail adresse
+    The corresponding e-mail adresse.
+
+copyright_name
+    The name or names the copyright should be attributed to.
 
 year
     The year of release
 
+import_notebooks
+    If you already have a collection of notebooks, you can choose to include them here. 
+    They will be copied from the path given for notebook_collection_path.
+    They will replace the placeholder/example :code:`index.ipynb` notebook and :code:`ìntroduction` folder and notebook, as well as the :code:`data` folder.
+
+notebook_collection_path
+    The path to your collection of jupyter notebook. Should be a folder containing all necessary materials. The folder itself wont be copied, only its contents.
+
 create_git
-    Choose if a local git repository should be initialised. Requires git installation.
+    Choose if a local git repository should be initialised. Requires `git installation`_.
 
 create_remote_and_push
     Choose if a remote repository should be created on GitHub. The local initial commit will be pushed. 
-    Only works if create_git is answered with Yes. Requires GitHub CLI installation and authentification by running :code:`gh auth login`.
+    Only works if create_git is answered with Yes. Requires `GitHub CLI installation`_ and authentification by running :code:`gh auth login`.
     The :code:`directory_name` is used as the name of the repository.
 
 github_organization
-    The name of your GitHub organization. If you dont want to create a repository within an organization, leave it as :code:`None`.
+    The name of your GitHub organization. If you dont want to create a repository within an organization, leave it as :code:`"None"`.
 
 git_visibility
     Choose between public, private and internal for your GitHub repositorys visibility. As our aim is to create OER this should always be public.
@@ -104,12 +115,27 @@ push_existing_remote
     If you have already created a GitHub repository beforehand you can choose to push to that instead. 
 
 git_remote
-    The link to your pre-existing repository. To avoid conflicts the repository should be empty.
+    The link to your pre-existing repository. You can leave this as :code:`"None"` if you have choosen to not use an existing remote repository. To avoid conflicts the repository should be empty.
 
 license
-    Choose an open license. More on that in the How to choose a license section. A :code:`LICENSE` file will be automatically created inlcuding the choosen licenses text.
+    Choose how you want to license your collection. You have the choice to have to seperate licenses for code and text with :code:`"Split"` or choose to use a single license set in either :code:`license_code` with :code:`"Code"` or :code:`license_text` with :code:`"Text"`. A :code:`LICENSE` file will be automatically created including the choosen licenses text(s).
+
+license_code
+    Choose a license for the source code in your notebooks or util files.
+
+license_text
+    Choose a license for your text and figures in the notebooks.
 
 include_ci
     Choose to create files for Continiuos Intigriation through GitHub actions.
+    This includes the following files and folders:
 
-**!TODO: Options for importing existing notebooks?!**
+    - :code:`.github/workflows/lint_nb.yml` - linting workflow
+    - :code:`.github/workflows/notebooks_ci.yml` - executing all notebook cells with sphinx
+    - :code:`requirements.txt` - empty placeholder that you can fill with your requirements
+    - :code:`ci/requirements.txt` - empty placeholder that you can fill with your requirements
+    - :code:`ci/README.md`
+
+
+.. _git installation: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+.. _GitHub CLI installation: https://github.com/cli/cli#installation

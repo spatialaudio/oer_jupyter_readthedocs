@@ -92,7 +92,7 @@ year
 import_notebooks
     If you already have a collection of notebooks, you can choose to include them here. 
     They will be copied from the path given for notebook_collection_path.
-    They will replace the placeholder/example :code:`index.ipynb` notebook and :code:`ìntroduction` folder and notebook, as well as the :code:`data` folder.
+    They will replace the placeholder/example :code:`index.ipynb` notebook and :code:`introduction` folder and notebook, as well as the :code:`data` folder.
 
 notebook_collection_path
     The path to your collection of jupyter notebook. Should be a folder containing all necessary materials. The folder itself wont be copied, only its contents.

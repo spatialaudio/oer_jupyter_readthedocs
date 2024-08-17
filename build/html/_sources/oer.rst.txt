@@ -34,9 +34,13 @@ Overview OER with Jupyter?
 --------------------------
 
 Jupyter Notebooks and the surrounding ecosystem of tools can provide a good starting point for creating OER. 
-This especially true for topics where the use of Jupyter Notebooks is already well established like signal processing, data science and statistics.
+This is especially true for topics where the use of Jupyter Notebooks is already well established like signal processing, data science and statistics.
 Notebooks allow for executable, interactive code and explanatory texts including figures and interactive elements to be combined in a single document.
 
-Notebooks can be converted html or pdf for static viewing or used interactivly through services such as binder without the need for a local installation.
+Notebooks can be converted to html or pdf for static viewing or used interactivly through services such as binder without the need for a local installation.
 
 The materials can be distributed through GitHub, which also provides tools for colaborative refinement.
+
+.. figure:: data/jupyter_oer_github.svg
+    :width: 90%
+    :align: center

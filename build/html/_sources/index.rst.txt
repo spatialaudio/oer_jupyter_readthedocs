@@ -1,4 +1,5 @@
-.. jupyter_oer_blueprint documentation master file, created by
+.. 
+   jupyter_oer_blueprint documentation master file, created by
    sphinx-quickstart on Mon Jul 15 16:18:21 2024.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
@@ -11,7 +12,7 @@ The concepts presented here are based on a series of OER created by `Sascha Spor
 You can find an example `here`_ and read more about the concept in the corresponding paper: `Concept and Realization of Open Educational Resources using Jupyter`_
 
 
-A `cookiecutter`_ template is provided and introduced as a good starting point for your OER project.
+A `cookiecutter`_ template is provided and introduced as a good starting point for your OER project. The template can be found on Github at: https://github.com/spatialaudio/cookiecutter_oer_jupyter
 
 
 
@@ -29,12 +30,13 @@ A `cookiecutter`_ template is provided and introduced as a good starting point f
 .. _Concept and Realization of Open Educational Resources using Jupyter: https://www.int.uni-rostock.de/fileadmin/user_upload/publications/spors/2020/Spors_et_al_DAGA_concept_realization_jupyter.pdf
 .. _cookiecutter: https://www.cookiecutter.io
 
-Indices and tables
-==================
+..
+   Indices and tables
+   ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   * :ref:`genindex`
+   * :ref:`modindex`
+   * :ref:`search`
 
 This project was created as part of the `Datenkompass MV (DKMV)`_ intiative for research data mangement in Mecklenburg Vorpommern, Germany.
 

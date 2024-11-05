@@ -14,21 +14,19 @@ The output will be displayed right below the cell. Cells can be executed in any 
     This tutorial assumes that you are familiar with jupyter notebook and its advantages.
 
 For an introduction to jupyter notebook please refer the `official documentation`_.
-**!TODO: refine - maybe link good tutorials...**
+There are also alot of helpful ressources with tips and tutorials available online. This one for example: https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/
 
 .. image:: data/placeholder_jupyter_structure.png
    :height: 200 px
    :width: 200 px
    :align: right 
 
-The general structure used in this tutorial is shown on the right. A notebook called :code:`index.ipynb` provides a table of contents and direct links to the other jupyter notebook representing subsections.
-**!TODO: replace placeholder figure?**
-
+The general structure used in this tutorial is shown on the right. A notebook called :code:`index.ipynb` provides a table of contents and direct links to the other jupyter notebooks representing subsections.
 
 Github
 -------------------------------
 
-We will use GitHub to make our notebooks accessible and findable. GitHub is based on the `git`_ version control system. It allowes for convinient revision and authorship tracking and provides tools for collaboration.
+You can use GitHub to make your notebooks accessible and findable. GitHub is based on the `git`_ version control system. It allowes for convinient revision and authorship tracking and provides tools for collaboration.
 Users can help revise and refine the materials through GitHub's issue and pull-request mechanisms. You can read more on the basics of GitHub and git `here`_.
 There are also plenty of helpful tutorials availible. You can find some of them in this `list`_. There are also `interactive materials`_ available on the topic.
 
@@ -97,7 +95,7 @@ You have a choice to include them on project creation. More on that in the cooki
 Referencing
 ^^^^^^^^^^^
 
-For others to be able to properly reference your OER you should mark a well maintained state of your repository as a release. 
+For others to be able to properly reference your OER you should mark a well maintained state of your repository as a release. It should also be done at all major revisions of the project. Within GitHub you can tag specific states of your project as releases.
 Additionally you can attach a `digital object identifier (DOI)`_ through services like `zenodo`_.
 
 Interacting with Notebooks
@@ -150,11 +148,28 @@ This is convinient for having a first look at the materials without any prior kn
 Export with nbsphinx
 ^^^^^^^^^^^^^^^^^^^^
 
-With `nbsphinx`_, a `sphinx`_ extension, you can produce HTML or LaTeX output from your collection of notebooks. 
-Please refer to the nbsphinx `installation page`_ to install all necessary packages. 
+With `nbsphinx`_, a `sphinx`_ extension , you can produce HTML or LaTeX output from your collection of notebooks. 
+Please refer to the nbsphinx `installation page`_ to install all necessary packages.
 
-For nbshinx to render the table of contents correctly you need to use the :code:`nbsphinx-toctree` tag as metadata for the :code:`index.ipynb` file's Markdown cells.
-You can also use the tag to specify cells that should not be rendered in the final output. 
+To get sphinx to know which notebooks to incorporate where and render the table of contents correctly you have to add an additional :code:`index.rst` file. 
+This file, written in `Restructured Text`_, should contain the paths to each notebook in a table of contents structure, similar to the one shown below.
+
+.. code-block::
+    :linenos:
+
+    Preface
+    =======
+
+    Introduction
+    ============
+
+    .. toctree::
+        :maxdepth: 3
+
+        introduction/introduction
+
+Another way is to use the :code:`nbsphinx-toctree` tag as metadata for the :code:`index.ipynb` file's Markdown cells.
+
 To edit a cells metadata in jupyter notebook you have to toggle the Cell Toolbar to Edit Metadata through the View tab: View -> Cell Toolbar -> Edit Metadata.
 Or, if your using JupyterLab, the cell metadata is available through the Property Inspector tab (marked by two small cogwheels in the top right corner) under advanced tools.
 The :code:`nbsphinx-toctree` metadata tag should be added to all individual cells containing a list of links to other notebooks.
@@ -193,3 +208,4 @@ You can find more information on this in the `nbsphinx documentation`_.
 .. _cookiecutter template: https://github.com/spatialaudio/cookiecutter_oer_jupyter
 .. _digital object identifier (DOI) : https://www.doi.org/the-identifier/what-is-a-doi/
 .. _zenodo: https://zenodo.org
+.. _Restructured Text: https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html

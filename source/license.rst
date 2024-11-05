@@ -22,7 +22,7 @@ Different Licenses for Texts and Code
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When creating OER in Jupyter Notebooks, it's important to recognize that different types of content—such as text and code—require distinct licensing. 
-Text-based content is typically covered by licenses like Creative Commons (CC). 
+Text-based content is typically covered by licenses like `Creative Commons`_ (CC). 
 On the other hand, code is generally licensed under open source licenses, which focus on issues pertinent to software. 
 Ensuring that each type of content is appropriately licensed supports both legal clarity and the effective reuse of educational resources. 
 Thus, the CC-licenses and different types of open source licenses are presented in the following paragraphs.
@@ -95,7 +95,7 @@ Licenses with a strict copyleft:
 Practical Tools for Choosing the Right License
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To choose the appropriate CC license, yyou can identify the suitable license combination by answering some key questions (see infographic) or by using the `Creative Commons License Chooser`_. 
+To choose the appropriate CC license, you can identify the suitable license combination by answering some key questions (see infographic below) or by using the `Creative Commons License Chooser`_. 
 This tool will help you choose a license that meets your criteria. For software licensing, you can use the `License Selector`_. 
 Both tools are user-friendly and help to define the legal framework to ensure that your OER are used in accordance with your preferences.
 
@@ -110,7 +110,8 @@ Both tools are user-friendly and help to define the legal framework to ensure th
 How to introduce a license (or two) to your project
 -----------------------------------------------------
 
-After you have chosen a license model that fits your project and your preferences, all you have to do is include a file named :code:`LICENSE` in your project files. This file should contain the full texts of all licenses you want to use.
+After you have chosen a license model that fits your project and your preferences, all you have to do is include a file named :code:`LICENSE` in your project files. 
+This file should contain the full texts of all licenses you want to use.
 You should also state whom the copyright is attributed to and under what license(s) in your meterials, for example in every notebook as a foot note and in the readme file for your repository.
 
 Links and Literature
@@ -127,6 +128,7 @@ Open Economics Guide. Publish OER Under an Appropriate Licence. 	https://openeco
 The OGRepository. 2012. Creating OER and Combining Licenses. 	https://www.youtube.com/watch?v=Hkz4q2yuQU8 
 
 
+.. _Creative Commons: https://creativecommons.org
 .. _'Open Publishing Guide for Authors': https://usq.pressbooks.pub/openpublishingguideforauthors/chapter/understanding-open-licences/
 .. _Open Source Initiative: https://opensource.org/osd
 .. _BSD: https://www.freebsd.org/copyright/freebsd-license/

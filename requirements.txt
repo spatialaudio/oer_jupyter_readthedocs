@@ -1,0 +1,6 @@
+jupyter-core==4.5.0
+nbconvert==5.5.0
+setuptools==69.5.1
+sphinx-rtd-theme==2.0.0
+sphinxcontrib-jquery==4.1
+wheel==0.43.0

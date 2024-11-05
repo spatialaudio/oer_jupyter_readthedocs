@@ -7,8 +7,8 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'jupyter_oer_blueprint'
-copyright = '2024, Johannes Otto'
-author = 'Johannes Otto'
+copyright = '2024, Johannes Otto, Dzaneta Kaunite, Sascha Spors'
+author = 'Johannes Otto, Dzaneta Kaunite, Sascha Spors'
 release = '2024'
 
 # -- General configuration ---------------------------------------------------

@@ -16,19 +16,47 @@ What does this template do?
 ---------------------------
 
 The template provided here is suposed to give you a head start while creating your OER either from scratch, or from a previously created collection of jupyter notebooks.
-It will create a basic folder structure to organize the materials **!TODO: shown in figre...!**. It also adds files providing functionality according to your choice.
+It will create a basic folder structure to organize the materials as shown below.  
+
+::
+
+    .
+    ├── .binder
+    ├── .github
+    ├── .gitignore
+    │
+    ├── ci
+    │   ├── README.md
+    │   └── requirements.txt
+    │
+    ├── data
+    │   └── example.png
+    │
+    ├── introduction
+    │   └── introduction.ipynb
+    │
+    ├── conf.py
+    ├── index.ipynb
+    ├── index.rst
+    ├── LICENSE
+    ├── README.md
+    └── requirements.txt
+
+
+It also adds files providing functionality according to your choice.
 Those may include:
 
     * A :code:`LICENSE` file with your prefered license text.
     * files providing CI functionality through GitHub Actions. These will be stored in :code:`.github/workflows` and :code:`.ci/`.
     * A :code:`README.md` file that already has some info about the project in it. It will be displayed by GitHub on the repositories landing page.
-    * A :code:`conf.py` used in building a static representation of the collection as html or pdf through sphinx with the nbsphinx extension.        
+    * A :code:`conf.py` used in building a static representation of the collection as html or pdf through sphinx with the nbsphinx extension. It contains configuration information for sphinx.     
+    * A :code:`index.rst` used in building a static representation of the collection as html or pdf through sphinx with the nbsphinx extension. It tells sphinx what notebooks to include and how to build a table of contents from them.
     * A :code:`.gitignore` 
-    * A :code:`requirements.txt` file. This file is generated as a placeholder. You have to fill                                                                                                                                      
-    * **!TODO: check for completeness!**                                  
-                                     
+    * A :code:`requirements.txt` file. This file is generated as a placeholder. You have to either fill it with your own requirements manually or use a tool like `pipreqs`_ to generate a replacement.
+
 The template can also set up and initialize a local git repository, as well as a remote GitHub repository, through post gen hooks. You need to have git and GitHub CLI installed for this to work.
 
+.. _pipreqs: https://pypi.org/project/pipreqs/
 
 Installation         
 ------------
@@ -75,7 +103,10 @@ directory_name
     The name of the directory that will be created.
 
 project_name
-    The name of the project. This will default to the directory name given above.
+    The name of the project. This will default to the directory name given above. It should be changed to a name not containing special charackter. Otherwise characters like '_' can lead to unwanted behavior when using latex conversion with sphinx.
+
+project_description 
+    A short description of the projects topic and/or contents.
 
 contact_name
     The persons name who is the main contact for the project.
@@ -92,7 +123,7 @@ year
 import_notebooks
     If you already have a collection of notebooks, you can choose to include them here. 
     They will be copied from the path given for notebook_collection_path.
-    They will replace the placeholder/example :code:`index.ipynb` notebook and :code:`introduction` folder and notebook, as well as the :code:`data` folder.
+    They will replace the placeholder/example :code:`index.ipynb` notebook, :code:`index.rst`, :code:`introduction` folder and notebook, as well as the :code:`data` folder.
 
 notebook_collection_path
     The path to your collection of jupyter notebook. Should be a folder containing all necessary materials. The folder itself wont be copied, only its contents.

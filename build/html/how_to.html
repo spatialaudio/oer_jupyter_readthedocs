@@ -102,14 +102,13 @@ You can incorporate latex style equations as well as figures. Some html syntax c
 Code cells let you write and execute source code of different programming languages, depending on the chosen kernel.
 The output will be displayed right below the cell. Cells can be executed in any order.</p>
 <p>For an introduction to jupyter notebook please refer the <a class="reference external" href="https://jupyter-notebook.readthedocs.io/en/latest/">official documentation</a>.
-<strong>!TODO: refine - maybe link good tutorials…</strong></p>
+There are also alot of helpful ressources with tips and tutorials available online. This one for example: <a class="reference external" href="https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/">https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/</a></p>
 <a class="reference internal image-reference" href="_images/placeholder_jupyter_structure.png"><img alt="_images/placeholder_jupyter_structure.png" class="align-right" src="_images/placeholder_jupyter_structure.png" style="width: 200px; height: 200px;" /></a>
-<p>The general structure used in this tutorial is shown on the right. A notebook called <code class="code docutils literal notranslate"><span class="pre">index.ipynb</span></code> provides a table of contents and direct links to the other jupyter notebook representing subsections.
-<strong>!TODO: replace placeholder figure?</strong></p>
+<p>The general structure used in this tutorial is shown on the right. A notebook called <code class="code docutils literal notranslate"><span class="pre">index.ipynb</span></code> provides a table of contents and direct links to the other jupyter notebooks representing subsections.</p>
 </section>
 <section id="github">
 <h2>Github<a class="headerlink" href="#github" title="Link to this heading"></a></h2>
-<p>We will use GitHub to make our notebooks accessible and findable. GitHub is based on the <a class="reference external" href="https://git-scm.com">git</a> version control system. It allowes for convinient revision and authorship tracking and provides tools for collaboration.
+<p>You can use GitHub to make your notebooks accessible and findable. GitHub is based on the <a class="reference external" href="https://git-scm.com">git</a> version control system. It allowes for convinient revision and authorship tracking and provides tools for collaboration.
 Users can help revise and refine the materials through GitHub’s issue and pull-request mechanisms. You can read more on the basics of GitHub and git <a class="reference external" href="https://docs.github.com/en/get-started">here</a>.
 There are also plenty of helpful tutorials availible. You can find some of them in this <a class="reference external" href="https://gist.github.com/jaseemabid/1321592">list</a>. There are also <a class="reference external" href="https://learngitbranching.js.org/?locale=en_US">interactive materials</a> available on the topic.</p>
 <section id="collaboration-and-authorship-tracking">
@@ -166,7 +165,7 @@ You have a choice to include them on project creation. More on that in the cooki
 </section>
 <section id="referencing">
 <h3>Referencing<a class="headerlink" href="#referencing" title="Link to this heading"></a></h3>
-<p>For others to be able to properly reference your OER you should mark a well maintained state of your repository as a release.
+<p>For others to be able to properly reference your OER you should mark a well maintained state of your repository as a release. It should also be done at all major revisions of the project. Within GitHub you can tag specific states of your project as releases.
 Additionally you can attach a <a class="reference external" href="https://www.doi.org/the-identifier/what-is-a-doi/">digital object identifier (DOI)</a> through services like <a class="reference external" href="https://zenodo.org">zenodo</a>.</p>
 </section>
 </section>
@@ -207,11 +206,24 @@ This is convinient for having a first look at the materials without any prior kn
 </section>
 <section id="export-with-nbsphinx">
 <h3>Export with nbsphinx<a class="headerlink" href="#export-with-nbsphinx" title="Link to this heading"></a></h3>
-<p>With <a class="reference external" href="https://nbsphinx.readthedocs.io/">nbsphinx</a>, a <a class="reference external" href="https://www.sphinx-doc.org/en/master/">sphinx</a> extension, you can produce HTML or LaTeX output from your collection of notebooks.
+<p>With <a class="reference external" href="https://nbsphinx.readthedocs.io/">nbsphinx</a>, a <a class="reference external" href="https://www.sphinx-doc.org/en/master/">sphinx</a> extension , you can produce HTML or LaTeX output from your collection of notebooks.
 Please refer to the nbsphinx <a class="reference external" href="https://nbsphinx.readthedocs.io/en/0.9.4/installation.html">installation page</a> to install all necessary packages.</p>
-<p>For nbshinx to render the table of contents correctly you need to use the <code class="code docutils literal notranslate"><span class="pre">nbsphinx-toctree</span></code> tag as metadata for the <code class="code docutils literal notranslate"><span class="pre">index.ipynb</span></code> file’s Markdown cells.
-You can also use the tag to specify cells that should not be rendered in the final output.
-To edit a cells metadata in jupyter notebook you have to toggle the Cell Toolbar to Edit Metadata through the View tab: View -&gt; Cell Toolbar -&gt; Edit Metadata.
+<p>To get sphinx to know which notebooks to incorporate where and render the table of contents correctly you have to add an additional <code class="code docutils literal notranslate"><span class="pre">index.rst</span></code> file.
+This file, written in <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html">Restructured Text</a>, should contain the paths to each notebook in a table of contents structure, similar to the one shown below.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">Preface</span>
+<span class="linenos"> 2</span><span class="o">=======</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="n">Introduction</span>
+<span class="linenos"> 5</span><span class="o">============</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="o">..</span> <span class="n">toctree</span><span class="p">::</span>
+<span class="linenos"> 8</span>    <span class="p">:</span><span class="n">maxdepth</span><span class="p">:</span> <span class="mi">3</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span>    <span class="n">introduction</span><span class="o">/</span><span class="n">introduction</span>
+</pre></div>
+</div>
+<p>Another way is to use the <code class="code docutils literal notranslate"><span class="pre">nbsphinx-toctree</span></code> tag as metadata for the <code class="code docutils literal notranslate"><span class="pre">index.ipynb</span></code> file’s Markdown cells.</p>
+<p>To edit a cells metadata in jupyter notebook you have to toggle the Cell Toolbar to Edit Metadata through the View tab: View -&gt; Cell Toolbar -&gt; Edit Metadata.
 Or, if your using JupyterLab, the cell metadata is available through the Property Inspector tab (marked by two small cogwheels in the top right corner) under advanced tools.
 The <code class="code docutils literal notranslate"><span class="pre">nbsphinx-toctree</span></code> metadata tag should be added to all individual cells containing a list of links to other notebooks.
 An example of what to add is shown below.</p>
@@ -234,7 +246,7 @@ This is done with the <code class="code docutils literal notranslate"><span clas
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2024, Johannes Otto.</p>
+    <p>&#169; Copyright 2024, Johannes Otto, Dzaneta Kaunite, Sascha Spors.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

@@ -38,13 +38,22 @@ A `cookiecutter`_ template is provided and introduced as a good starting point f
    * :ref:`modindex`
    * :ref:`search`
 
-This project was created as part of the `Datenkompass MV (DKMV)`_ intiative for research data mangement in Mecklenburg Vorpommern, Germany.
+The Read the Docs materials are licenses under Creative Commons Attribution 4.0. The Cookiecutter template is licensed under the MIT license.
+
+.. container:: twocol
+
+   .. container:: leftside
+
+      .. image:: data/dkmv_logo.png
+         :height: 100 px
+         :width: 100 px
+         :align: right 
+         :target: https://datenkompass-mv.de
+         :alt: The DKMV logo
+
+   .. container:: rightside
+
+      This project was created as part of the `Datenkompass MV (DKMV)`_ intiative for research data mangement in Mecklenburg Vorpommern, Germany.
 
 .. _Datenkompass MV (DKMV): https://datenkompass-mv.de
 
-.. image:: data/dkmv_logo.png
-   :height: 100 px
-   :width: 100 px
-   :align: right 
-   :target: https://datenkompass-mv.de
-   :alt: The DKMV logo

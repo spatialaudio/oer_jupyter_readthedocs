@@ -93,17 +93,41 @@ It also allows hooks to be executed at several points during the creation. Hooks
 <section id="what-does-this-template-do">
 <h2>What does this template do?<a class="headerlink" href="#what-does-this-template-do" title="Link to this heading"></a></h2>
 <p>The template provided here is suposed to give you a head start while creating your OER either from scratch, or from a previously created collection of jupyter notebooks.
-It will create a basic folder structure to organize the materials <strong>!TODO: shown in figre…!</strong>. It also adds files providing functionality according to your choice.
+It will create a basic folder structure to organize the materials as shown below.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.
+├── .binder
+├── .github
+├── .gitignore
+│
+├── ci
+│   ├── README.md
+│   └── requirements.txt
+│
+├── data
+│   └── example.png
+│
+├── introduction
+│   └── introduction.ipynb
+│
+├── conf.py
+├── index.ipynb
+├── index.rst
+├── LICENSE
+├── README.md
+└── requirements.txt
+</pre></div>
+</div>
+<p>It also adds files providing functionality according to your choice.
 Those may include:</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>A <code class="code docutils literal notranslate"><span class="pre">LICENSE</span></code> file with your prefered license text.</p></li>
 <li><p>files providing CI functionality through GitHub Actions. These will be stored in <code class="code docutils literal notranslate"><span class="pre">.github/workflows</span></code> and <code class="code docutils literal notranslate"><span class="pre">.ci/</span></code>.</p></li>
 <li><p>A <code class="code docutils literal notranslate"><span class="pre">README.md</span></code> file that already has some info about the project in it. It will be displayed by GitHub on the repositories landing page.</p></li>
-<li><p>A <code class="code docutils literal notranslate"><span class="pre">conf.py</span></code> used in building a static representation of the collection as html or pdf through sphinx with the nbsphinx extension.</p></li>
+<li><p>A <code class="code docutils literal notranslate"><span class="pre">conf.py</span></code> used in building a static representation of the collection as html or pdf through sphinx with the nbsphinx extension. It contains configuration information for sphinx.</p></li>
+<li><p>A <code class="code docutils literal notranslate"><span class="pre">index.rst</span></code> used in building a static representation of the collection as html or pdf through sphinx with the nbsphinx extension. It tells sphinx what notebooks to include and how to build a table of contents from them.</p></li>
 <li><p>A <code class="code docutils literal notranslate"><span class="pre">.gitignore</span></code></p></li>
-<li><p>A <code class="code docutils literal notranslate"><span class="pre">requirements.txt</span></code> file. This file is generated as a placeholder. You have to fill</p></li>
-<li><p><strong>!TODO: check for completeness!</strong></p></li>
+<li><p>A <code class="code docutils literal notranslate"><span class="pre">requirements.txt</span></code> file. This file is generated as a placeholder. You have to either fill it with your own requirements manually or use a tool like <a class="reference external" href="https://pypi.org/project/pipreqs/">pipreqs</a> to generate a replacement.</p></li>
 </ul>
 </div></blockquote>
 <p>The template can also set up and initialize a local git repository, as well as a remote GitHub repository, through post gen hooks. You need to have git and GitHub CLI installed for this to work.</p>
@@ -136,7 +160,9 @@ Now you can either download the template from GitHub and use it from the directo
 <dl class="simple">
 <dt>directory_name</dt><dd><p>The name of the directory that will be created.</p>
 </dd>
-<dt>project_name</dt><dd><p>The name of the project. This will default to the directory name given above.</p>
+<dt>project_name</dt><dd><p>The name of the project. This will default to the directory name given above. It should be changed to a name not containing special charackter. Otherwise characters like ‘_’ can lead to unwanted behavior when using latex conversion with sphinx.</p>
+</dd>
+<dt>project_description</dt><dd><p>A short description of the projects topic and/or contents.</p>
 </dd>
 <dt>contact_name</dt><dd><p>The persons name who is the main contact for the project.</p>
 </dd>
@@ -148,7 +174,7 @@ Now you can either download the template from GitHub and use it from the directo
 </dd>
 <dt>import_notebooks</dt><dd><p>If you already have a collection of notebooks, you can choose to include them here.
 They will be copied from the path given for notebook_collection_path.
-They will replace the placeholder/example <code class="code docutils literal notranslate"><span class="pre">index.ipynb</span></code> notebook and <code class="code docutils literal notranslate"><span class="pre">introduction</span></code> folder and notebook, as well as the <code class="code docutils literal notranslate"><span class="pre">data</span></code> folder.</p>
+They will replace the placeholder/example <code class="code docutils literal notranslate"><span class="pre">index.ipynb</span></code> notebook, <code class="code docutils literal notranslate"><span class="pre">index.rst</span></code>, <code class="code docutils literal notranslate"><span class="pre">introduction</span></code> folder and notebook, as well as the <code class="code docutils literal notranslate"><span class="pre">data</span></code> folder.</p>
 </dd>
 <dt>notebook_collection_path</dt><dd><p>The path to your collection of jupyter notebook. Should be a folder containing all necessary materials. The folder itself wont be copied, only its contents.</p>
 </dd>
@@ -196,7 +222,7 @@ This includes the following files and folders:</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2024, Johannes Otto.</p>
+    <p>&#169; Copyright 2024, Johannes Otto, Dzaneta Kaunite, Sascha Spors.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

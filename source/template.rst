@@ -49,7 +49,7 @@ Those may include:
     * A :code:`LICENSE` file with your preferred license text.
     * files providing CI functionality through GitHub Actions. These will be stored in :code:`.github/workflows` and :code:`.ci/`.
     * A :code:`README.md` file that already has some info about the project in it. It will be displayed by GitHub on the repositories landing page.
-    * A :code:`conf.py` used in building a static representation of the collection as HTML or PDF through sphinx with the nbsphinx extension. It contains configuration information for sphinx.  
+    * A :code:`conf.py` used in building a static representation of the collection as HTML or PDF through sphinx with the nbsphinx extension. It contains configuration information for sphinx and nbsphinx. A basic version is included with the template. It is highly recommended, that you customize it to your project.
     * A :code:`index.rst` used in building a static representation of the collection as HTML or PDF through sphinx with the nbsphinx extension. It tells sphinx what notebooks to include and how to build a table of contents from them.
     * A :code:`.gitignore` 
     * A :code:`requirements.txt` file. This file is generated as a placeholder. You have to either fill it with your own requirements manually or use a tool like `pipreqs`_ to generate a replacement.
@@ -58,7 +58,7 @@ The template can also set up and initialize a local git repository, as well as a
 
 .. _pipreqs: https://pypi.org/project/pipreqs/
 
-Installation         
+Installation 
 ------------
 
 Apart from a `python 3 installation`_ you also need to install Cookiecutter.
@@ -123,7 +123,8 @@ year
 import_notebooks
     If you already have a collection of notebooks, you can choose to include them here. 
     They will be copied from the path given for notebook_collection_path.
-    They will replace the placeholder/example :code:`index.ipynb` notebook, :code:`index.rst`, :code:`introduction` folder and notebook, as well as the :code:`data` folder.
+    They will replace the placeholder/example :code:`index.ipynb` notebook, :code:`index.rst`, :code:`requirements.txt`, :code:`introduction` folder and notebook, as well as the :code:`data` folder.
+    If you want to use sphinx, you will have to create your own :code:`index.rst`.
 
 notebook_collection_path
     The path to your collection of Jupyter notebook. Should be a folder containing all necessary materials. The folder itself won't be copied, only its contents.

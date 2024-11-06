@@ -65,7 +65,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="license.html">How to choose a license</a></li>
-<li class="toctree-l1"><a class="reference internal" href="template.html">Template for cookiecutter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="template.html">Template for Cookiecutter</a></li>
 </ul>
 
         </div>
@@ -97,20 +97,21 @@
 <section id="jupyter-notebooks">
 <h2>Jupyter Notebooks<a class="headerlink" href="#jupyter-notebooks" title="Link to this heading"></a></h2>
 <p>Jupyter notebooks are structured in cells. Cells can have different types.
-Markdown cells use the markdown language to allow you to make comprehensive lecture notes, descriptions and code documentation.
-You can incorporate latex style equations as well as figures. Some html syntax can be used too.
-Code cells let you write and execute source code of different programming languages, depending on the chosen kernel.
+Markdown cells use the Markdown language to allow you to make comprehensive lecture notes, descriptions and code documentation.
+You can incorporate latex style equations as well as figures. Some HTML syntax can be used too.</p>
+<p>Code cells let you write and execute source code of different programming languages, depending on the chosen kernel.
 The output will be displayed right below the cell. Cells can be executed in any order.</p>
-<p>For an introduction to jupyter notebook please refer the <a class="reference external" href="https://jupyter-notebook.readthedocs.io/en/latest/">official documentation</a>.
-There are also alot of helpful ressources with tips and tutorials available online. This one for example: <a class="reference external" href="https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/">https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/</a></p>
-<a class="reference internal image-reference" href="_images/placeholder_jupyter_structure.png"><img alt="_images/placeholder_jupyter_structure.png" class="align-right" src="_images/placeholder_jupyter_structure.png" style="width: 200px; height: 200px;" /></a>
-<p>The general structure used in this tutorial is shown on the right. A notebook called <code class="code docutils literal notranslate"><span class="pre">index.ipynb</span></code> provides a table of contents and direct links to the other jupyter notebooks representing subsections.</p>
+<p>For an introduction to Jupyter notebook please refer the <a class="reference external" href="https://jupyter-notebook.readthedocs.io/en/latest/">official documentation</a>.
+There are also a lot of helpful resources with tips and tutorials available online. This one for example: <a class="reference external" href="https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/">https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/</a></p>
+<a class="reference internal image-reference" href="_images/jupyternb_structure.svg"><img alt="_images/jupyternb_structure.svg" class="align-right" src="_images/jupyternb_structure.svg" width="300px" /></a>
+<p>The general structure used in this tutorial is shown on the right. A notebook called <code class="code docutils literal notranslate"><span class="pre">index.ipynb</span></code> provides a table of contents and direct links to the other Jupyter notebooks representing subsections.
+You should also add links at the top of each subsection notebook that lead back to the index notebook.</p>
 </section>
 <section id="github">
 <h2>Github<a class="headerlink" href="#github" title="Link to this heading"></a></h2>
-<p>You can use GitHub to make your notebooks accessible and findable. GitHub is based on the <a class="reference external" href="https://git-scm.com">git</a> version control system. It allowes for convinient revision and authorship tracking and provides tools for collaboration.
+<p>You can use GitHub to make your notebooks accessible and findable. GitHub is based on the <a class="reference external" href="https://git-scm.com">git</a> version control system. It allows for convenient revision and authorship tracking and provides tools for collaboration.
 Users can help revise and refine the materials through GitHub’s issue and pull-request mechanisms. You can read more on the basics of GitHub and git <a class="reference external" href="https://docs.github.com/en/get-started">here</a>.
-There are also plenty of helpful tutorials availible. You can find some of them in this <a class="reference external" href="https://gist.github.com/jaseemabid/1321592">list</a>. There are also <a class="reference external" href="https://learngitbranching.js.org/?locale=en_US">interactive materials</a> available on the topic.</p>
+There are also plenty of helpful tutorials available. You can find some of them in this <a class="reference external" href="https://gist.github.com/jaseemabid/1321592">list</a>. There are also <a class="reference external" href="https://learngitbranching.js.org/?locale=en_US">interactive materials</a> available that can help you better understand Git’s functionality.</p>
 <section id="collaboration-and-authorship-tracking">
 <h3>Collaboration and Authorship tracking<a class="headerlink" href="#collaboration-and-authorship-tracking" title="Link to this heading"></a></h3>
 <p>GitHub’s Issues functionality can be used to track issues, answer questions people might have and receive enhancement proposals or feature requests.
@@ -119,12 +120,12 @@ Finally others can fork the repository to change the contents to better fit thei
 </section>
 <section id="continuous-integration">
 <h3>Continuous Integration<a class="headerlink" href="#continuous-integration" title="Link to this heading"></a></h3>
-<p><a class="reference external" href="https://en.wikipedia.org/wiki/Continuous_integration">Continuous Integration (CI)</a>  describes the process of integrating source code and automatically building and testing the software throughout development. This can help ensuring the quality and functionaltity of your OER materials.
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Continuous_integration">Continuous Integration (CI)</a> describes the process of integrating source code and automatically building and testing the software throughout development. This can help to ensure the quality and functionality of your OER materials.
 GitHub provides this functionality through its <a class="reference external" href="https://docs.github.com/en/actions">Actions</a> feature.</p>
 <p>GitHub Actions uses workflows configured in <a class="reference external" href="https://yaml.org">YAML</a> files ending on <code class="code docutils literal notranslate"><span class="pre">.yml</span></code> or <code class="code docutils literal notranslate"><span class="pre">.yaml</span></code>. These files have to be placed in your repository at <code class="code docutils literal notranslate"><span class="pre">.github/workflows/</span></code>. They contain information on when to be run, what to run and with what packages and versions.
-They can be executed be <a class="reference external" href="https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners/about-github-hosted-runners">GitHub hosted runners</a> or self hosted runners.</p>
+They can be executed be <a class="reference external" href="https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners/about-github-hosted-runners">GitHub hosted runners</a> or self-hosted runners.</p>
 <p>You can use this to automatically check your project for programming errors whenever you change something. It can also <a class="reference external" href="https://en.wikipedia.org/wiki/Lint_(software)">lint</a> your notebooks at the same time.</p>
-<p>A <code class="code docutils literal notranslate"><span class="pre">notebook_ci.yml</span></code> workflow file, that runs a <a class="reference external" href="https://www.sphinx-doc.org/en/master/">sphinx</a>  build with <a class="reference external" href="https://nbsphinx.readthedocs.io/">nbsphinx</a> extension on certain conditions to execute all code in the notebooks could look like this:</p>
+<p>A <code class="code docutils literal notranslate"><span class="pre">notebook_ci.yml</span></code> workflow file, that runs a <a class="reference external" href="https://www.sphinx-doc.org/en/master/">sphinx</a> build with <a class="reference external" href="https://nbsphinx.readthedocs.io/">nbsphinx</a> extension on certain conditions to execute all code in the notebooks could look like this:</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Sphinx build</span>
 
 <span class="nt">on</span><span class="p">:</span>
@@ -160,13 +161,13 @@ It is also run by a schedule on every 1. and 15. day of the month at 1:30 o cloc
 </div>
 <p>As you can see the this workflow will also automatically install all requirements from a <code class="code docutils literal notranslate"><span class="pre">requirements.txt</span></code>.
 The <code class="code docutils literal notranslate"><span class="pre">notebook_ci.yml</span></code>, <code class="code docutils literal notranslate"><span class="pre">requirements.txt</span></code>, as well as a <code class="code docutils literal notranslate"><span class="pre">lint_nb.yml</span></code> file, that can be used for automatic linting, are included in the provided <a class="reference external" href="https://github.com/spatialaudio/cookiecutter_oer_jupyter">cookiecutter template</a>.
-You have a choice to include them on project creation. More on that in the cookiecutter template section.
+You have a choice to include them on project creation. More on that in the Cookiecutter template section.
 <strong>TBC…</strong></p>
 </section>
 <section id="referencing">
 <h3>Referencing<a class="headerlink" href="#referencing" title="Link to this heading"></a></h3>
-<p>For others to be able to properly reference your OER you should mark a well maintained state of your repository as a release. It should also be done at all major revisions of the project. Within GitHub you can tag specific states of your project as releases.
-Additionally you can attach a <a class="reference external" href="https://www.doi.org/the-identifier/what-is-a-doi/">digital object identifier (DOI)</a> through services like <a class="reference external" href="https://zenodo.org">zenodo</a>.</p>
+<p>For others to be able to properly reference your OER you should mark a well maintained state of your repository as a release. It should also be done at all major revisions of the project. Within GitHub, you can tag specific states of your project as releases.
+Additionally, you can attach a <a class="reference external" href="https://www.doi.org/the-identifier/what-is-a-doi/">digital object identifier (DOI)</a> through services like <a class="reference external" href="https://zenodo.org">zenodo</a>.</p>
 </section>
 </section>
 <section id="interacting-with-notebooks">
@@ -176,7 +177,7 @@ Additionally you can attach a <a class="reference external" href="https://www.do
 <h3>Local<a class="headerlink" href="#local" title="Link to this heading"></a></h3>
 <p>Cloning the repository and using the materials locally provides the best interactivity to the user, enabling them to execute computational examples in the notebooks, make changes and save those changes.
 But this also has the highest barrier to entry because of the need of local installations of Jupyter and other packages used.</p>
-<p>You can help your users by providing a <code class="code docutils literal notranslate"><span class="pre">requirements.txt</span></code> file or <code class="code docutils literal notranslate"><span class="pre">environment.yml</span></code> file, that can be used with <a class="reference external" href="https://pip.pypa.io/en/stable/">pip</a> or <a class="reference external" href="https://docs.conda.io/projects/conda/en/stable/">conda</a> respectivly to install all needed packages or create an environment with them included.
+<p>You can help your users by providing a <code class="code docutils literal notranslate"><span class="pre">requirements.txt</span></code> file or <code class="code docutils literal notranslate"><span class="pre">environment.yml</span></code> file, that can be used with <a class="reference external" href="https://pip.pypa.io/en/stable/">pip</a> or <a class="reference external" href="https://docs.conda.io/projects/conda/en/stable/">conda</a> respectively to install all needed packages or create an environment with them included.
 You can use pip to automatically create a <code class="code docutils literal notranslate"><span class="pre">requirements.txt</span></code> by running:
 .. code-block:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">freeze</span> <span class="o">&gt;</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
@@ -192,17 +193,17 @@ You can use pip to automatically create a <code class="code docutils literal not
 </section>
 <section id="my-binder">
 <h3>(my)Binder<a class="headerlink" href="#my-binder" title="Link to this heading"></a></h3>
-<p>With binder you can make your notebooks avaible to be interacted with within an online environment. You can use <a class="reference external" href="https://mybinder.org">mybinder.org</a> to host the notebooks for you with no futher requirements than your already available puplic repository.
+<p>With Binder you can make your notebooks available to be interacted with within an online environment. You can use <a class="reference external" href="https://mybinder.org">mybinder.org</a> to host the notebooks for you with no further requirements than your already available public repository.
 Binder allows for the notebooks to be used and executed like you would with a local installation. The only downside is, that you are unable to save your changes.
-You simply need to enter the link to your public GitHub repository, specifiy which branch or commit to use and optionally provide a link to the notebook that should be used as a landing page (for example your <code class="code docutils literal notranslate"><span class="pre">index.ipynb</span></code>).
+You simply need to enter the link to your public GitHub repository, specify which branch or commit to use and optionally provide a link to the notebook that should be used as a landing page (for example your <code class="code docutils literal notranslate"><span class="pre">index.ipynb</span></code>).
 Mybinder will then generate a shareable link to your interactive binder session.</p>
-<p>You can also set up your own binder server, if the ressources provided by <a class="reference external" href="https://mybinder.org">mybinder.org</a> are not sufficient. Read more on that in the <a class="reference external" href="https://mybinder.readthedocs.io/en/latest/">binder documentation</a>.</p>
+<p>You can also set up your own binder server, if the resources provided by <a class="reference external" href="https://mybinder.org">mybinder.org</a> are not sufficient. Read more on that in the <a class="reference external" href="https://mybinder.readthedocs.io/en/latest/">binder documentation</a>.</p>
 </section>
 <section id="nbviewer">
 <h3>nbviewer<a class="headerlink" href="#nbviewer" title="Link to this heading"></a></h3>
 <p>The nbviewer service provides static versions of your notebook collection.
 Similar to the way <a class="reference external" href="https://mybinder.org">mybinder.org</a> works, all you have to do is enter the link to your public repository on <a class="reference external" href="https://nbviewer.org">nbviewer.org</a> and you will get a link to static renderings of your notebooks.
-This is convinient for having a first look at the materials without any prior knowlege of jupyter but it doesn’t allow for any interactivity.</p>
+This is convenient for having a first look at the materials without any prior knowledge of Jupyter, but it doesn’t allow for any interactivity.</p>
 </section>
 <section id="export-with-nbsphinx">
 <h3>Export with nbsphinx<a class="headerlink" href="#export-with-nbsphinx" title="Link to this heading"></a></h3>
@@ -223,13 +224,13 @@ This file, written in <a class="reference external" href="https://www.sphinx-doc
 </pre></div>
 </div>
 <p>Another way is to use the <code class="code docutils literal notranslate"><span class="pre">nbsphinx-toctree</span></code> tag as metadata for the <code class="code docutils literal notranslate"><span class="pre">index.ipynb</span></code> file’s Markdown cells.</p>
-<p>To edit a cells metadata in jupyter notebook you have to toggle the Cell Toolbar to Edit Metadata through the View tab: View -&gt; Cell Toolbar -&gt; Edit Metadata.
-Or, if your using JupyterLab, the cell metadata is available through the Property Inspector tab (marked by two small cogwheels in the top right corner) under advanced tools.
+<p>To edit a cells’ metadata in Jupyter notebook you have to toggle the Cell Toolbar to Edit Metadata through the View tab: View → Cell Toolbar → Edit Metadata.
+Or, if you’re using JupyterLab, the cell metadata is available through the Property Inspector tab (marked by two small cogwheels in the top right corner) under advanced tools.
 The <code class="code docutils literal notranslate"><span class="pre">nbsphinx-toctree</span></code> metadata tag should be added to all individual cells containing a list of links to other notebooks.
 An example of what to add is shown below.</p>
 <a class="reference internal image-reference" href="_images/metadata_jupyter_toc.png"><img alt="_images/metadata_jupyter_toc.png" class="align-center" src="_images/metadata_jupyter_toc.png" style="width: 80%;" /></a>
-<p>If you have general information about the collection or copyright in every notebook as a header or footnote, you can hide these when rendering to pdf or html, so they dont appear every chapter.
-This is done with the <code class="code docutils literal notranslate"><span class="pre">&quot;nbsphinx&quot;:</span> <span class="pre">&quot;hidden&quot;</span></code> tag in the cells metadata.</p>
+<p>If you have general information about the collection or copyright in every notebook as a header or footnote, you can hide these when rendering to PDF or HTML, so they don’t appear every chapter.
+This is done with the <code class="code docutils literal notranslate"><span class="pre">&quot;nbsphinx&quot;:</span> <span class="pre">&quot;hidden&quot;</span></code> tag in the cells’ metadata.</p>
 <p>You can find more information on this in the <a class="reference external" href="https://nbsphinx.readthedocs.io/en/0.9.4/subdir/toctree.html">nbsphinx documentation</a>.</p>
 </section>
 </section>

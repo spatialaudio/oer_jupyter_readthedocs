@@ -24,7 +24,7 @@ According to which one must be able to:
 the materials freely. 
 
 The motivation behind OER is to provide free access to high-quality education to everyone. This helps in lessening global inequalities when it comes to educational opportunities.
-OERs can be beneficial on all levels of education. 
+OER's can be beneficial on all levels of education. 
 
 .. _CC-BY 3.0: https://creativecommons.org/licenses/by/3.0/
 .. _Open Educational Ressources (OER): https://de.wikipedia.org/wiki/Open_Educational_Resources
@@ -37,9 +37,9 @@ Jupyter Notebooks and the surrounding ecosystem of tools can provide a good star
 This is especially true for topics where the use of Jupyter Notebooks is already well established like signal processing, data science and statistics.
 Notebooks allow for executable, interactive code and explanatory texts including figures and interactive elements to be combined in a single document.
 
-Notebooks can be converted to html or pdf for static viewing or used interactivly through services such as binder without the need for a local installation.
+Notebooks can be converted to HTML or PDF for static viewing or used interactively through services such as binder without the need for a local installation.
 
-The materials can be distributed through GitHub, which also provides tools for colaborative refinement.
+The materials can be distributed through GitHub, which also provides tools for collaborative refinement.
 
 .. figure:: data/jupyter_oer_github.svg
     :width: 90%

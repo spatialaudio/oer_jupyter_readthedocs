@@ -112,7 +112,7 @@ How to introduce a license (or two) to your project
 
 After you have chosen a license model that fits your project and your preferences, all you have to do is include a file named :code:`LICENSE` in your project files. 
 This file should contain the full texts of all licenses you want to use.
-You should also state whom the copyright is attributed to and under what license(s) in your meterials, for example in every notebook as a foot note and in the readme file for your repository.
+You should also state whom the copyright is attributed to and under what license(s) in your materials, for example in every notebook as a footnote and in the README file for your repository.
 
 Links and Literature
 ---------------------

@@ -5,30 +5,32 @@ Jupyter Notebooks
 -----------------
 
 Jupyter notebooks are structured in cells. Cells can have different types. 
-Markdown cells use the markdown language to allow you to make comprehensive lecture notes, descriptions and code documentation. 
-You can incorporate latex style equations as well as figures. Some html syntax can be used too.
+Markdown cells use the Markdown language to allow you to make comprehensive lecture notes, descriptions and code documentation. 
+You can incorporate latex style equations as well as figures. Some HTML syntax can be used too.
+
 Code cells let you write and execute source code of different programming languages, depending on the chosen kernel.
 The output will be displayed right below the cell. Cells can be executed in any order.
+
 
 .. 
     This tutorial assumes that you are familiar with jupyter notebook and its advantages.
 
-For an introduction to jupyter notebook please refer the `official documentation`_.
-There are also alot of helpful ressources with tips and tutorials available online. This one for example: https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/
+For an introduction to Jupyter notebook please refer the `official documentation`_.
+There are also a lot of helpful resources with tips and tutorials available online. This one for example: https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/
 
-.. image:: data/placeholder_jupyter_structure.png
-   :height: 200 px
-   :width: 200 px
+.. image:: data/jupyternb_structure.svg
+   :width: 300 px
    :align: right 
 
-The general structure used in this tutorial is shown on the right. A notebook called :code:`index.ipynb` provides a table of contents and direct links to the other jupyter notebooks representing subsections.
+The general structure used in this tutorial is shown on the right. A notebook called :code:`index.ipynb` provides a table of contents and direct links to the other Jupyter notebooks representing subsections. 
+You should also add links at the top of each subsection notebook that lead back to the index notebook.
 
 Github
 -------------------------------
 
-You can use GitHub to make your notebooks accessible and findable. GitHub is based on the `git`_ version control system. It allowes for convinient revision and authorship tracking and provides tools for collaboration.
+You can use GitHub to make your notebooks accessible and findable. GitHub is based on the `git`_ version control system. It allows for convenient revision and authorship tracking and provides tools for collaboration.
 Users can help revise and refine the materials through GitHub's issue and pull-request mechanisms. You can read more on the basics of GitHub and git `here`_.
-There are also plenty of helpful tutorials availible. You can find some of them in this `list`_. There are also `interactive materials`_ available on the topic.
+There are also plenty of helpful tutorials available. You can find some of them in this `list`_. There are also `interactive materials`_ available that can help you better understand Git's functionality.
 
 Collaboration and Authorship tracking
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -40,15 +42,15 @@ Finally others can fork the repository to change the contents to better fit thei
 Continuous Integration
 ^^^^^^^^^^^^^^^^^^^^^^
 
-`Continuous Integration (CI)`_  describes the process of integrating source code and automatically building and testing the software throughout development. This can help ensuring the quality and functionaltity of your OER materials.
+`Continuous Integration (CI)`_ describes the process of integrating source code and automatically building and testing the software throughout development. This can help to ensure the quality and functionality of your OER materials.
 GitHub provides this functionality through its `Actions`_ feature. 
 
 GitHub Actions uses workflows configured in `YAML`_ files ending on :code:`.yml` or :code:`.yaml`. These files have to be placed in your repository at :code:`.github/workflows/`. They contain information on when to be run, what to run and with what packages and versions. 
-They can be executed be `GitHub hosted runners`_ or self hosted runners. 
+They can be executed be `GitHub hosted runners`_ or self-hosted runners. 
 
 You can use this to automatically check your project for programming errors whenever you change something. It can also `lint`_ your notebooks at the same time.
 
-A :code:`notebook_ci.yml` workflow file, that runs a `sphinx`_  build with `nbsphinx`_ extension on certain conditions to execute all code in the notebooks could look like this:
+A :code:`notebook_ci.yml` workflow file, that runs a `sphinx`_ build with `nbsphinx`_ extension on certain conditions to execute all code in the notebooks could look like this:
 
 .. code-block:: yaml
 
@@ -89,14 +91,14 @@ The next part defines what is done and what the runner needs to run it (e.g. a s
 
 As you can see the this workflow will also automatically install all requirements from a :code:`requirements.txt`.
 The :code:`notebook_ci.yml`, :code:`requirements.txt`, as well as a :code:`lint_nb.yml` file, that can be used for automatic linting, are included in the provided `cookiecutter template`_. 
-You have a choice to include them on project creation. More on that in the cookiecutter template section.
+You have a choice to include them on project creation. More on that in the Cookiecutter template section.
 **TBC...**
 
 Referencing
 ^^^^^^^^^^^
 
-For others to be able to properly reference your OER you should mark a well maintained state of your repository as a release. It should also be done at all major revisions of the project. Within GitHub you can tag specific states of your project as releases.
-Additionally you can attach a `digital object identifier (DOI)`_ through services like `zenodo`_.
+For others to be able to properly reference your OER you should mark a well maintained state of your repository as a release. It should also be done at all major revisions of the project. Within GitHub, you can tag specific states of your project as releases.
+Additionally, you can attach a `digital object identifier (DOI)`_ through services like `zenodo`_.
 
 Interacting with Notebooks
 --------------------------
@@ -109,7 +111,7 @@ Cloning the repository and using the materials locally provides the best interac
 But this also has the highest barrier to entry because of the need of local installations of Jupyter and other packages used.
 
 
-You can help your users by providing a :code:`requirements.txt` file or :code:`environment.yml` file, that can be used with `pip`_ or `conda`_ respectivly to install all needed packages or create an environment with them included.
+You can help your users by providing a :code:`requirements.txt` file or :code:`environment.yml` file, that can be used with `pip`_ or `conda`_ respectively to install all needed packages or create an environment with them included.
 You can use pip to automatically create a :code:`requirements.txt` by running:
 .. code-block:: 
 
@@ -127,12 +129,12 @@ This will list all packages installed in your environment with :code:`pip instal
 (my)Binder
 ^^^^^^^^^^
 
-With binder you can make your notebooks avaible to be interacted with within an online environment. You can use `mybinder.org`_ to host the notebooks for you with no futher requirements than your already available puplic repository.
+With Binder you can make your notebooks available to be interacted with within an online environment. You can use `mybinder.org`_ to host the notebooks for you with no further requirements than your already available public repository.
 Binder allows for the notebooks to be used and executed like you would with a local installation. The only downside is, that you are unable to save your changes.
-You simply need to enter the link to your public GitHub repository, specifiy which branch or commit to use and optionally provide a link to the notebook that should be used as a landing page (for example your :code:`index.ipynb`).
+You simply need to enter the link to your public GitHub repository, specify which branch or commit to use and optionally provide a link to the notebook that should be used as a landing page (for example your :code:`index.ipynb`).
 Mybinder will then generate a shareable link to your interactive binder session.
 
-You can also set up your own binder server, if the ressources provided by `mybinder.org`_ are not sufficient. Read more on that in the `binder documentation`_.
+You can also set up your own binder server, if the resources provided by `mybinder.org`_ are not sufficient. Read more on that in the `binder documentation`_.
 
 
 
@@ -141,7 +143,7 @@ nbviewer
 
 The nbviewer service provides static versions of your notebook collection. 
 Similar to the way `mybinder.org`_ works, all you have to do is enter the link to your public repository on `nbviewer.org`_ and you will get a link to static renderings of your notebooks. 
-This is convinient for having a first look at the materials without any prior knowlege of jupyter but it doesn't allow for any interactivity.
+This is convenient for having a first look at the materials without any prior knowledge of Jupyter, but it doesn't allow for any interactivity.
 
 
 
@@ -170,8 +172,8 @@ This file, written in `Restructured Text`_, should contain the paths to each not
 
 Another way is to use the :code:`nbsphinx-toctree` tag as metadata for the :code:`index.ipynb` file's Markdown cells.
 
-To edit a cells metadata in jupyter notebook you have to toggle the Cell Toolbar to Edit Metadata through the View tab: View -> Cell Toolbar -> Edit Metadata.
-Or, if your using JupyterLab, the cell metadata is available through the Property Inspector tab (marked by two small cogwheels in the top right corner) under advanced tools.
+To edit a cells' metadata in Jupyter notebook you have to toggle the Cell Toolbar to Edit Metadata through the View tab: View → Cell Toolbar → Edit Metadata.
+Or, if you're using JupyterLab, the cell metadata is available through the Property Inspector tab (marked by two small cogwheels in the top right corner) under advanced tools.
 The :code:`nbsphinx-toctree` metadata tag should be added to all individual cells containing a list of links to other notebooks.
 An example of what to add is shown below. 
 
@@ -180,8 +182,8 @@ An example of what to add is shown below.
     :align: center
 
 
-If you have general information about the collection or copyright in every notebook as a header or footnote, you can hide these when rendering to pdf or html, so they dont appear every chapter. 
-This is done with the :code:`"nbsphinx": "hidden"` tag in the cells metadata.
+If you have general information about the collection or copyright in every notebook as a header or footnote, you can hide these when rendering to PDF or HTML, so they don't appear every chapter. 
+This is done with the :code:`"nbsphinx": "hidden"` tag in the cells' metadata.
 
 You can find more information on this in the `nbsphinx documentation`_.
 

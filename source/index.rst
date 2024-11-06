@@ -12,7 +12,7 @@ The concepts presented here are based on a series of OER created by `Sascha Spor
 You can find an example `here`_ and read more about the concept in the corresponding paper: `Concept and Realization of Open Educational Resources using Jupyter`_
 
 
-A `cookiecutter`_ template is provided and introduced as a good starting point for your OER project. The template can be found on Github at: https://github.com/spatialaudio/cookiecutter_oer_jupyter
+A `cookiecutter`_ template is provided and introduced as a good starting point for your OER project. The template can be found on GitHub at: https://github.com/spatialaudio/cookiecutter_oer_jupyter
 
 
 
@@ -53,7 +53,7 @@ The Read the Docs materials are licenses under Creative Commons Attribution 4.0.
 
    .. container:: rightside
 
-      This project was created as part of the `Datenkompass MV (DKMV)`_ intiative for research data mangement in Mecklenburg Vorpommern, Germany.
+      This project was created as part of the `Datenkompass MV (DKMV)`_ initiative for research data management in Mecklenburg-Vorpommern, Germany.
 
 .. _Datenkompass MV (DKMV): https://datenkompass-mv.de
 

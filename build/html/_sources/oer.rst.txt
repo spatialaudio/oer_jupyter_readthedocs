@@ -41,6 +41,7 @@ Notebooks can be converted to HTML or PDF for static viewing or used interactive
 
 The materials can be distributed through GitHub, which also provides tools for collaborative refinement.
 
-.. figure:: data/jupyter_oer_github.svg
-    :width: 90%
-    :align: center
+As mentioned above, the materials have to be provided under an open license. Specifically one that supports the 5R criteria. 
+You can read more on how to choose the right license for your project in the :ref:`license section` section.
+
+More details on how this is done and what parts are needed are given in the :ref:`how to` section.

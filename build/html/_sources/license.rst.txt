@@ -1,3 +1,5 @@
+.. _license section:
+
 How to choose a license
 =======================
 ..
@@ -113,6 +115,9 @@ How to introduce a license (or two) to your project
 After you have chosen a license model that fits your project and your preferences, all you have to do is include a file named :code:`LICENSE` in your project files. 
 This file should contain the full texts of all licenses you want to use.
 You should also state whom the copyright is attributed to and under what license(s) in your materials, for example in every notebook as a footnote and in the README file for your repository.
+
+In the case of a Jupyter notebook collection a license model using separate licenses should be adopted. A separate license is used for the code examples within the notebooks than for texts, illustrations and so on. 
+While using a license like Creative Commons Attribution for the text passages is fine in the context of OER, it might impose copyleft behavior on the code blocks within the material. This would make the computational examples unusable as OER. 
 
 Links and Literature
 ---------------------

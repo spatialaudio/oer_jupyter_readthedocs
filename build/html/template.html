@@ -82,7 +82,7 @@
            <div itemprop="articleBody">
              
   <section id="template-for-cookiecutter">
-<h1>Template for Cookiecutter<a class="headerlink" href="#template-for-cookiecutter" title="Link to this heading"></a></h1>
+<span id="template"></span><h1>Template for Cookiecutter<a class="headerlink" href="#template-for-cookiecutter" title="Link to this heading"></a></h1>
 <p>This sections discusses the <a class="reference external" href="https://www.cookiecutter.io">cookiecutter</a> template, that can be found <a class="reference external" href="https://github.com/spatialaudio/cookiecutter_oer_jupyter">here</a>.</p>
 <section id="what-is-cookiecutter">
 <h2>What is cookiecutter<a class="headerlink" href="#what-is-cookiecutter" title="Link to this heading"></a></h2>
@@ -124,7 +124,7 @@ Those may include:</p>
 <li><p>A <code class="code docutils literal notranslate"><span class="pre">LICENSE</span></code> file with your preferred license text.</p></li>
 <li><p>files providing CI functionality through GitHub Actions. These will be stored in <code class="code docutils literal notranslate"><span class="pre">.github/workflows</span></code> and <code class="code docutils literal notranslate"><span class="pre">.ci/</span></code>.</p></li>
 <li><p>A <code class="code docutils literal notranslate"><span class="pre">README.md</span></code> file that already has some info about the project in it. It will be displayed by GitHub on the repositories landing page.</p></li>
-<li><p>A <code class="code docutils literal notranslate"><span class="pre">conf.py</span></code> used in building a static representation of the collection as HTML or PDF through sphinx with the nbsphinx extension. It contains configuration information for sphinx.</p></li>
+<li><p>A <code class="code docutils literal notranslate"><span class="pre">conf.py</span></code> used in building a static representation of the collection as HTML or PDF through sphinx with the nbsphinx extension. It contains configuration information for sphinx and nbsphinx. A basic version is included with the template. It is highly recommended, that you customize it to your project.</p></li>
 <li><p>A <code class="code docutils literal notranslate"><span class="pre">index.rst</span></code> used in building a static representation of the collection as HTML or PDF through sphinx with the nbsphinx extension. It tells sphinx what notebooks to include and how to build a table of contents from them.</p></li>
 <li><p>A <code class="code docutils literal notranslate"><span class="pre">.gitignore</span></code></p></li>
 <li><p>A <code class="code docutils literal notranslate"><span class="pre">requirements.txt</span></code> file. This file is generated as a placeholder. You have to either fill it with your own requirements manually or use a tool like <a class="reference external" href="https://pypi.org/project/pipreqs/">pipreqs</a> to generate a replacement.</p></li>
@@ -174,7 +174,8 @@ Now you can either download the template from GitHub and use it from the directo
 </dd>
 <dt>import_notebooks</dt><dd><p>If you already have a collection of notebooks, you can choose to include them here.
 They will be copied from the path given for notebook_collection_path.
-They will replace the placeholder/example <code class="code docutils literal notranslate"><span class="pre">index.ipynb</span></code> notebook, <code class="code docutils literal notranslate"><span class="pre">index.rst</span></code>, <code class="code docutils literal notranslate"><span class="pre">introduction</span></code> folder and notebook, as well as the <code class="code docutils literal notranslate"><span class="pre">data</span></code> folder.</p>
+They will replace the placeholder/example <code class="code docutils literal notranslate"><span class="pre">index.ipynb</span></code> notebook, <code class="code docutils literal notranslate"><span class="pre">index.rst</span></code>, <code class="code docutils literal notranslate"><span class="pre">requirements.txt</span></code>, <code class="code docutils literal notranslate"><span class="pre">introduction</span></code> folder and notebook, as well as the <code class="code docutils literal notranslate"><span class="pre">data</span></code> folder.
+If you want to use sphinx, you will have to create your own <code class="code docutils literal notranslate"><span class="pre">index.rst</span></code>.</p>
 </dd>
 <dt>notebook_collection_path</dt><dd><p>The path to your collection of Jupyter notebook. Should be a folder containing all necessary materials. The folder itself won’t be copied, only its contents.</p>
 </dd>

@@ -1,5 +1,13 @@
+.. _how to:
+
 Step by Step - Creating OER with Jupyter, Git ...
 =================================================
+
+The figure below gives an overview of all the parts described in this section. 
+
+.. figure:: data/jupyter_oer_github.svg
+    :width: 90%
+    :align: center
 
 Jupyter Notebooks
 -----------------
@@ -22,8 +30,14 @@ There are also a lot of helpful resources with tips and tutorials available onli
    :width: 300 px
    :align: right 
 
-The general structure used in this tutorial is shown on the right. A notebook called :code:`index.ipynb` provides a table of contents and direct links to the other Jupyter notebooks representing subsections. 
+The general structure used in this tutorial is shown on the right. A notebook called :code:`index.ipynb` provides a table of contents and direct links to the other Jupyter notebooks representing subsections or chapters. 
 You should also add links at the top of each subsection notebook that lead back to the index notebook.
+The subsection notebooks can be organized in folders representing section. It is also a good idea to organize materials used from within the notebooks in separate folders. 
+Examples of this could be datasets or images, stored in :code:`data` or :code:`images` folder.
+
+Again for a material to be classified as an OER it needs to be made available under an open license. A license statement should be added to all of your notebooks as a footnote. You can find more on this in the :ref:`license section` section.
+
+The :ref:`Cookiecutter template <template>` briefly demonstrates most of these concepts. 
 
 Github
 -------------------------------

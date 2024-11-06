@@ -1,5 +1,8 @@
+.. _template:
+
 Template for Cookiecutter
 =========================
+
 This sections discusses the `cookiecutter`_ template, that can be found `here`_.
 
 .. _cookiecutter: https://www.cookiecutter.io
@@ -83,6 +86,7 @@ For further installation advice please refer to the `official documentation`_.
 
 How to use the template
 -----------------------
+
 To use the template to create your new project you have to open a terminal and navigate to the folder you want to create the project folder in.
 Now you can either download the template from GitHub and use it from the directory you saved it in:
 

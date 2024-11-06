@@ -93,7 +93,11 @@
            <div itemprop="articleBody">
              
   <section id="step-by-step-creating-oer-with-jupyter-git">
-<h1>Step by Step - Creating OER with Jupyter, Git …<a class="headerlink" href="#step-by-step-creating-oer-with-jupyter-git" title="Link to this heading"></a></h1>
+<span id="how-to"></span><h1>Step by Step - Creating OER with Jupyter, Git …<a class="headerlink" href="#step-by-step-creating-oer-with-jupyter-git" title="Link to this heading"></a></h1>
+<p>The figure below gives an overview of all the parts described in this section.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/jupyter_oer_github.svg"><img alt="_images/jupyter_oer_github.svg" src="_images/jupyter_oer_github.svg" width="90%" /></a>
+</figure>
 <section id="jupyter-notebooks">
 <h2>Jupyter Notebooks<a class="headerlink" href="#jupyter-notebooks" title="Link to this heading"></a></h2>
 <p>Jupyter notebooks are structured in cells. Cells can have different types.
@@ -104,8 +108,12 @@ The output will be displayed right below the cell. Cells can be executed in any 
 <p>For an introduction to Jupyter notebook please refer the <a class="reference external" href="https://jupyter-notebook.readthedocs.io/en/latest/">official documentation</a>.
 There are also a lot of helpful resources with tips and tutorials available online. This one for example: <a class="reference external" href="https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/">https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/</a></p>
 <a class="reference internal image-reference" href="_images/jupyternb_structure.svg"><img alt="_images/jupyternb_structure.svg" class="align-right" src="_images/jupyternb_structure.svg" width="300px" /></a>
-<p>The general structure used in this tutorial is shown on the right. A notebook called <code class="code docutils literal notranslate"><span class="pre">index.ipynb</span></code> provides a table of contents and direct links to the other Jupyter notebooks representing subsections.
-You should also add links at the top of each subsection notebook that lead back to the index notebook.</p>
+<p>The general structure used in this tutorial is shown on the right. A notebook called <code class="code docutils literal notranslate"><span class="pre">index.ipynb</span></code> provides a table of contents and direct links to the other Jupyter notebooks representing subsections or chapters.
+You should also add links at the top of each subsection notebook that lead back to the index notebook.
+The subsection notebooks can be organized in folders representing section. It is also a good idea to organize materials used from within the notebooks in separate folders.
+Examples of this could be datasets or images, stored in <code class="code docutils literal notranslate"><span class="pre">data</span></code> or <code class="code docutils literal notranslate"><span class="pre">images</span></code> folder.</p>
+<p>Again for a material to be classified as an OER it needs to be made available under an open license. A license statement should be added to all of your notebooks as a footnote. You can find more on this in the <a class="reference internal" href="license.html#license-section"><span class="std std-ref">How to choose a license</span></a> section.</p>
+<p>The <a class="reference internal" href="template.html#template"><span class="std std-ref">Cookiecutter template</span></a> briefly demonstrates most of these concepts.</p>
 </section>
 <section id="github">
 <h2>Github<a class="headerlink" href="#github" title="Link to this heading"></a></h2>
